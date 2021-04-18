@@ -11,7 +11,7 @@
     <section class="blog-area section">
         <div class="container">
           <div class="slider display-table center-text">
-            <h4 class="title display-table-cell"><b>{{ $joball->count() }} Results for {{ $query }} , {{ $location }} </b></h4>
+            <h4 class="title display-table-cell"><b>{{ $joball->count() }} Jobs Found - {{ $query }} , {{ $location }} </b></h4>
         </div><!-- slider -->
             <div class="row">
 
