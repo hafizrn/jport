@@ -16,15 +16,14 @@
  
             <tr class="candidates-list">
                 <td class="title">
-                  <div class="body">
-                    <h5><a href="{{ route('employer.resume.show',$jobseeker->jobseeker_id) }}" target="_blank">{{ $jobseeker->resume->first_name }} {{ $jobseeker->resume->last_name }}</a></h5>
+                  <div class="button primary-color">
+                    <a href="{{ route('employer.resume.show',$jobseeker->jobseeker_id) }}" target="_blank">{{ $jobseeker->resume->first_name }} {{ $jobseeker->resume->last_name }}</a>
                   </div>
                 </td>
                 <td class="status">{{ $jobseeker->jobs->title }}</td>
                 <td class="action">
                   <a href="#" class="download"><i data-feather="download"></i></a>
                   <a href="#" class="inbox"><i data-feather="mail"></i></a>
-                  <a href="#" class="remove"><i data-feather="trash-2"></i></a>
                 </td>
               </tr>
 

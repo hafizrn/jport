@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('content')
-    <h1 class="display-3">District</h1>    
+    <h1 class="display-3">Upazila</h1>    
     <a href="{{ route('admin.upazila.create')}}" class="btn btn-primary">Add Upazila</a>
   <table class="table table-striped">
     <thead>

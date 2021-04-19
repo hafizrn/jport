@@ -41,37 +41,45 @@
                   </div>
                 </div>
               </div>
-              <div class="edication-background details-section dashboard-section">
+              <div class="education-background details-section dashboard-section">
                 <h4><i data-feather="book"></i>Education Background</h4>
-                <div class="education-label">
-                  <span class="study-year">2018 - Present</span>
-                  <h5>Masters in Software Engineering<span>@ Engineering University</span></h5>
-                  <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+                <div class="information-and-contact">
+                    @foreach ($education as $ed)
+                        <div class="information">
+                            <div class="education-label">
+                                <span class="study-year">Exam Year: {{ $ed->year }} <br />Duraion :
+                                    {{ $ed->duration }}</span>
+                                <p>Marks: {{ $ed->marks }}</p>
+                                <h5>{{ $ed->exam_name }} in {{ $ed->subject }}<span>@
+                                        {{ $ed->university }}</span></h5>
+                                <p>Institute Name: {{ $ed->institute }}</p>
+                               
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-                <div class="education-label">
-                  <span class="study-year">2014 - 2018</span>
-                  <h5>Diploma in Graphics Design<span>@ Graphic Arts Institute</span></h5>
-                  <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-                </div>
-                <div class="education-label">
-                  <span class="study-year">2008 - 2014</span>
-                  <h5>Secondary School Certificate<span>@  Engineering High School</span></h5>
-                  <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-                </div>
+            </div>
+            <div class="experience dashboard-section details-section">
+              <h4><i data-feather="briefcase"></i>Work Experiance</h4>
+                
+              <div class="information-and-contact">
+                  @foreach ($experience as $ex)
+                      <div class="information">
+                          <div class="experience-label">
+                              <span class="service-year">
+                                Duraion : {{ $ex->duration }}<br/>
+                                Company: {{ $ex->company }}<br/>
+                                Company Type: {{ $ex->company_type }}<br/>
+                                Designation: {{ $ex->designation }}<br/>
+                                Responsibilities: {{ $ex->responsibilities }}<br/>
+                                Department Name: {{ $ex->department }}<br/>
+                              </span>
+                          
+                          </div>
+                      </div>
+                  @endforeach
               </div>
-              <div class="experience dashboard-section details-section">
-                <h4><i data-feather="briefcase"></i>Work Experiance</h4>
-                <div class="experience-section">
-                  <span class="service-year">2016 - Present</span>
-                  <h5>Lead UI/UX Designer<span>@ Codepassengers LTD</span></h5>
-                  <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-                </div>
-                <div class="experience-section">
-                  <span class="service-year">2012 - 2016</span>
-                  <h5>Former Graphic Designer<span>@ Graphicreeeo CO</span></h5>
-                  <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-                </div>
-              </div>
+          </div>
               <div class="special-qualification dashboard-section details-section">
                 <div class="skill">
                   <h4> <i data-feather="gift"></i>Skills:</h4>

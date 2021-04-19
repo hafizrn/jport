@@ -13,4 +13,9 @@ class Category extends Model
         'name',
         'slug',
     ];
+
+    public function jobs()
+    {
+        return $this->hasMany(Job::class);
+    }
 }

@@ -23,9 +23,9 @@ class CreateEmployerprofilesTable extends Migration
             $table->string('location')->nullable();
             $table->string('category')->nullable();
             $table->text('about')->nullable();
-            $table->string('photo')->default('employer.jpg');
+            $table->string('photo')->nullable();
             $table->string('website')->nullable();
-            $table->string('companylogo')->default('company.jpg');
+            $table->string('companylogo')->nullable();
             $table->timestamps();
         });
     }

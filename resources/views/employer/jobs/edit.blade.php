@@ -162,7 +162,7 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                <textarea name="company_info" class="form-control">{{ $jobs->company_info }}</textarea>
+                <input type="text" name="company_info" value="{{ $jobs->company_info }}" class="form-control"/>
                 </div>
             </div>
             </div>
@@ -181,5 +181,20 @@
 
 
 
-@stop
+@endsection
+
+@push('js')
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+
+    </script>
+
+@endpush
 

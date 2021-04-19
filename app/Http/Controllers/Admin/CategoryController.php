@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\District;
 
 class CategoryController extends Controller
 {
@@ -94,7 +93,7 @@ class CategoryController extends Controller
 
         $categories->update($data);
 
-        return redirect('/admin/categories')->with('message','category Updated successfully!');
+        return redirect('/admin/category')->with('message','category Updated successfully!');
     }
 
     /**
@@ -105,7 +104,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $categories = District::find($id);
+        $categories = Category::find($id);
         $categories->delete();
         return redirect('admin/category')->with('message','categories deleted');
     }

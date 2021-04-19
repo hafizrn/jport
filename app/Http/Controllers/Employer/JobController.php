@@ -9,6 +9,8 @@ use App\Models\Level;
 use App\Models\Category;
 use App\Models\Type;
 use App\Models\Userresume;
+use App\Models\Usereducation;
+use App\Models\Userexperience;
 use App\Models\Jobapply;
 use Illuminate\Support\Facades\Auth;
 
@@ -123,8 +125,11 @@ class JobController extends Controller
     public function resume_show($id)
     {
 
-        $resumes = Userresume::whereIn('user_id',[$id])->first();
-        return view('employer.jobs.resume',compact('jobs','types','resumes'));
+        $resumes = Userresume::where('user_id',$id)->first();
+        //dd($resumes);
+        $education = Usereducation::where('user_id',$id)->get();
+        $experience = Userexperience::where('user_id',$id)->get();
+        return view('employer.jobs.resume',compact('resumes','education','experience'));
     }
     /**
      * Show the form for editing the specified resource.

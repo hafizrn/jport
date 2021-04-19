@@ -46,7 +46,7 @@ Route::group(['as'=>'employer.','prefix'=>'employer','namespace'=>'App\Http\Cont
     Route::resource('job', JobController::class );
     Route::resource('profile', EmployerprofileController::class );
     Route::resource('jobcandidate', JobcandidateController::class );
-    Route::get('jobseeker/resume/{id}', [JobController::class, 'resume_show'] )->name('resume.show');
+    Route::get('jobseeker/resume/{id}', [App\Http\Controllers\Employer\JobController::class, 'resume_show'] )->name('resume.show');
 });
 Route::group(['as'=>'user.','prefix'=>'user','namespace'=>'App\Http\Controllers\User','middleware'=>['auth','user']], function (){
     Route::get('dashboard', [App\Http\Controllers\User\DashboardController::class, 'index'] )->name('dashboard');

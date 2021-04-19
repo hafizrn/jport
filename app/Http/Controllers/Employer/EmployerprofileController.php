@@ -133,9 +133,7 @@ class EmployerprofileController extends Controller
             'location' => 'required',
             'category' => 'required',
             'about' => 'required',
-            'photo' => 'required',
-            'website' => 'required',
-            'companylogo' => 'required'
+            'website' => 'required'
 
         ]);
         

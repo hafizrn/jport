@@ -9,12 +9,18 @@ use App\Models\District;
 use App\Models\Job;
 use App\Models\Employerprofile;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     
    public function index()
    {
+    $jobcount = DB::table('jobs')
+    ->select('category_id', DB::raw('count(*) as total'))
+    ->groupBy('category_id')
+    ->pluck('total')->all();
+    //dd($jobcount);
        $jobCount = Job::count();
        $divisions = Division::all();
        $districts = District::all();

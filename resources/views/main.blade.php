@@ -74,9 +74,15 @@
               <div class="key-info">
                 <ul>
                   @foreach ($categories as $category)
-                  <li>
-                    <a href="{{ route('category.jobs',$category->id)}}">{{ $category->name }}
-                      <span></span>
+                    <?php
+                      $categoryCount = DB::table('jobs')->join('categories', 'jobs.category_id', '=', 'categories.id')
+                      ->select('jobs.category_id')
+                      ->where('jobs.category_id','=',$category->id)
+                      ->count();
+                    ?>
+                  <li><span> &ofcir; </span>
+                    <a href="{{ route('category.jobs',$category->id)}}">{{ $category->name }} 
+                      ({{$categoryCount}})
                     </a>
                   </li>
                   @endforeach
@@ -93,7 +99,7 @@
               <div class="key-info">
                 <ul>
                   @foreach ($districts as $district)
-                  <li>
+                  <li><span> &ofcir; </span>
                     <a href="{{ route('location.jobs',$district->name)}}">{{ $district->name }}
                       <span></span>
                     </a>
@@ -112,9 +118,9 @@
               <div class="key-info">
                 <ul>
                   @foreach ($employerprofile as $item)
-                  <li>
+                  <li><span> &ofcir; </span>
                     <a href="#">{{ $item->company }}
-                      <span>(0)</span>
+                      <span></span>
                     </a>
                   </li> 
                   @endforeach

@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('content')
-    <h1 class="display-3">District</h1>    
+    <h1 class="display-3">Job Category</h1>    
     <a href="{{ route('admin.category.create')}}" class="btn btn-primary">Add Category</a>
   <table class="table table-striped">
     <thead>

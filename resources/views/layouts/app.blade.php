@@ -155,8 +155,8 @@
                 <div class="footer-widget widget-about">
                   <h4>About Us</h4>
                   <div class="widget-inner">
-                    <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    <span class="about-contact"><i data-feather="phone-forwarded"></i>+8 246-345-0698</span>
+                    <p class="description">We are a job search engine designed to make the process of finding a job on the internet easier for the user</p>
+                    <span class="about-contact"><i data-feather="phone-forwarded"></i>+2343-32-5555</span>
                     <span class="about-contact"><i data-feather="mail"></i>supportmail@gmail.com</span>
                   </div>
                 </div>
@@ -166,7 +166,6 @@
                   <h4>Information</h4>
                   <div class="widget-inner">
                     <ul>
-                      <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
                       <li><a href="#">Privacy Policy</a></li>
                       <li><a href="#">Terms &amp; Conditions</a></li>
@@ -182,8 +181,6 @@
                       <li>Create Account</li>
                       <li>Career Counseling</li>
                       <li>My Dashboard</li>
-                      <li>FAQ</li>
-                      <li>Video Guides</li>
                     </ul>
                   </div>
                 </div>
@@ -196,7 +193,6 @@
                       <li>Create Account</li>
                       <li>Products/Service</li>
                       <li>Post a Job</li>
-                      <li>FAQ</li>
                     </ul>
                   </div>
                 </div>
